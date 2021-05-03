@@ -45,6 +45,47 @@ config_global="""
 </config>"""
 
 
+#### IN INTERFACE-CONFIG ANDRA' AD IMPOSTARE I SEGUENTI PARAMETRI######
+# INDIRIZZI IP SULLE INTERFACCE GigabitEthernet1 E GigabitEthernet2
+#-----------------------------------------------------------
+
+interface_confg = """
+<config>
+    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+        <interface>
+            <GigabitEthernet>
+               <name>2</name>
+                 <description>gigabit ethernet 2</description>
+                   <ip>
+                    <address>
+                       <primary>
+                         <address>10.10.22.2</address>
+                         <mask>255.255.255.252</mask>
+                       </primary>
+                    </address>
+                   </ip>
+            </GigabitEthernet>
+        </interface>
+        <interface>
+          <GigabitEthernet>
+            <name>3</name>
+              <description>gigabit ethernet 3</description>
+                <ip> 
+                  <address>
+                    <primary>
+                       <address>10.10.23.1</address>
+                       <mask>255.255.255.252</mask>
+                    </primary>
+                  </address>
+               </ip>                       
+          </GigabitEthernet>
+        </interface>
+    </native>
+</config>"""
+
+
+
+
 #### IN OSPF ANDRA' AD IMPOSTARE I SEGUENTI PARAMETRI######
 # OSPF SU TUTTE LE INTERFACCE
 # PASSIVE INTERFACE GigabitEthernet1
@@ -92,40 +133,3 @@ ospf = """
 </config>"""
 
 
-#### IN INTERFACE-CONFIG ANDRA' AD IMPOSTARE I SEGUENTI PARAMETRI######
-# INDIRIZZI IP SULLE INTERFACCE GigabitEthernet1 E GigabitEthernet2
-#-----------------------------------------------------------
-
-interface_confg = """
-<config>
-    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
-        <interface>
-            <GigabitEthernet>
-               <name>2</name>
-                 <description>gigabit ethernet 2</description>
-                   <ip>
-                    <address>
-                       <primary>
-                         <address>10.10.22.2</address>
-                         <mask>255.255.255.252</mask>
-                       </primary>
-                    </address>
-                   </ip>
-            </GigabitEthernet>
-        </interface>
-        <interface>
-          <GigabitEthernet>
-            <name>3</name>
-              <description>gigabit ethernet 3</description>
-                <ip> 
-                  <address>
-                    <primary>
-                       <address>10.10.23.1</address>
-                       <mask>255.255.255.252</mask>
-                    </primary>
-                  </address>
-               </ip>                       
-          </GigabitEthernet>
-        </interface>
-    </native>
-</config>"""
