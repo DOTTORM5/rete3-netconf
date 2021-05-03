@@ -9,8 +9,6 @@
 # USERNAME
 # SECRET-PASSWORD
 #-----------------------------------------------------------
-#####in IN OSPF
-
 
 config_global="""
 <config>
@@ -46,6 +44,12 @@ config_global="""
    </native>
 </config>"""
 
+
+#### IN OSPF ANDRA' AD IMPOSTARE I SEGUENTI PARAMETRI######
+# OSPF SU TUTTE LE INTERFACCE
+# PASSIVE INTERFACE GigabitEthernet1
+#-----------------------------------------------------------
+
 ospf = """
 
 <config>
@@ -59,7 +63,9 @@ ospf = """
            <id>10</id>
               <passive-interface>
                 <interface>GigabitEthernet1</interface>
-                  </passive-interface><router-id>3.3.3.3</router-id>
+                  </passive-interface>
+                  
+               <router-id>3.3.3.3</router-id>
             
                      <network>
                         <ip>10.10.13.2</ip>
@@ -84,6 +90,11 @@ ospf = """
   </router>
  </native>
 </config>"""
+
+
+#### IN INTERFACE-CONFIG ANDRA' AD IMPOSTARE I SEGUENTI PARAMETRI######
+# INDIRIZZI IP SULLE INTERFACCE GigabitEthernet1 E GigabitEthernet2
+#-----------------------------------------------------------
 
 interface_confg = """
 <config>
