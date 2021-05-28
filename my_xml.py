@@ -109,20 +109,20 @@ ospf = """
                <router-id>3.3.3.3</router-id>
             
                      <network>
-                        <ip>10.10.13.2</ip>
-                        <wildcard>0.0.0.0</wildcard>
+                        <ip>10.10.13.0</ip>
+                        <wildcard>0.0.0.3</wildcard>
                         <area>0</area>
                      </network>
              
                      <network>
-                        <ip>10.10.22.2</ip>
-                        <wildcard>0.0.0.0</wildcard>
+                        <ip>10.10.22.0</ip>
+                        <wildcard>0.0.0.3</wildcard>
                         <area>0</area>
                      </network>
                         
                      <network>
-                        <ip>10.10.23.1</ip>
-                        <wildcard>0.0.0.0</wildcard>
+                        <ip>10.10.23.0</ip>
+                        <wildcard>0.0.0.3</wildcard>
                         <area>0</area>
                      </network>
         </process-id>
