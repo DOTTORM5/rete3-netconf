@@ -90,11 +90,8 @@ interface_confg = """
 #-----------------------------------------------------------
 
 ospf = """
-
 <config>
  <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
-  
-  
   <router>      
    <router-ospf xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf">
      <ospf>
@@ -129,5 +126,3 @@ ospf = """
   </router>
  </native>
 </config>"""
-
-
