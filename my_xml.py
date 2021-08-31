@@ -22,10 +22,8 @@ config_global="""
       <service>
          <password-encryption/>
       </service>
-       
+      
       <hostname>TEAM3</hostname>
-
-       
       <username>
             <name>Team3</name>
             <secret>
